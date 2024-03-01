@@ -2,7 +2,7 @@
 	margin: 0%;
 	padding: 0%;
 }
-.bjimg {
+/* .bjimg {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,5 +10,10 @@
   height: 100%;
   z-index: -10;
   object-fit: cover;
- 
+} */
+body{
+	width: 100vw;
+	height: 100vh;
+	background: url('../images/index_bg.jpg') no-repeat;
+	background-size: cover;/* 让背景图片等比例缩放并覆盖整个容器 */
 }
