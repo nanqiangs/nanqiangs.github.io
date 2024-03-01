@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>电子时钟</title>
+    <style>
+		#clock {
+		    font-size: 80px;
+		    color: #000;
+		    text-align: center;
+		    margin-top: 200px;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="clock"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+		function updateClock() {
+		    var currentTime = new Date();
+		    var hours = currentTime.getHours();
+		    var minutes = currentTime.getMinutes();
+		    var seconds = currentTime.getSeconds();
+		
+		    hours = (hours < 10 ? "0" : "") + hours;
+		    minutes = (minutes < 10 ? "0" : "") + minutes;
+		    seconds = (seconds < 10 ? "0" : "") + seconds;
+		
+		    var clockText = hours + ":" + minutes + ":" + seconds;
+		
+		    $('#clock').text(clockText);
+		}
+		
+		$(document).ready(function() {
+		    setInterval(updateClock, 1000);
+		});
+
+	</script>
+</body>
+</html>
