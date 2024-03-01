@@ -2,10 +2,32 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>这是一个用来玩的网站</title>
+		<link rel="stylesheet" href="css/index.css">
+		
 	</head>
 	<body>
-		<h1>欢迎来到我的第一个静态网站</h1>
-		<a href="时钟效果.html">这是一个时钟的文件</a>
+										<!-- 自动播放  循环播放  表示静音播放 -->
+		<video src="images/21.mp4" class="bjimg" autoplay loop muted></video>
+		<h1>这是一个用来玩的网站</h1>
 	</body>
+	 <script>
+	//禁用右键（防止右键查看源代码） 
+	    window.oncontextmenu = function () { return false; }
+	 //(防止F12和shift+ctrl+i调起开发者工具） 
+		document.onkeydown = function(e) {
+		    if (e.keyCode == 123 || event.ctrlKey || event.shiftKey) { // F12键的键码是123
+		        window.event.returnValue = false;
+		    }
+		};
+	 //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+	 var h = window.innerHeight, w = window.innerWidth;
+	 var s = h/w
+	window.onresize = function () {
+	 if (h != window.innerHeight || w != window.innerWidth) {
+	        window.close();
+	        window.location = "about:blank";
+	      }
+	    }
+	</script>
 </html>
