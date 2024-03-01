@@ -1,13 +1,3 @@
-function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-
-            // 在这里添加你的密码验证逻辑
-            if (password === '123456') {
-                document.getElementById('message').innerText = '密码正确，欢迎进入！';
-            } else {
-                document.getElementById('message').innerText = '密码错误，请重试。';
-            }
-        }
 //禁用右键（防止右键查看源代码） 
 window.oncontextmenu = function () { return false; }
  //(防止F12和shift+ctrl+i调起开发者工具） 
